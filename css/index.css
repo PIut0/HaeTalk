@@ -1,0 +1,244 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------- intro ---------------------------- */
+
+.intro{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url("../img/intro_bg.png") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.intro .menu{
+    width: 2em;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+}
+.intro .logo1{
+    width: 6em;
+    position: absolute;
+    right: 0px;
+    top: 1.2%;
+}
+.intro .contents{
+    display: flex;
+    position: relative;
+    color: #edeae1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    margin: auto;
+    padding-top: 4em;
+}
+.intro .contents h2{
+    color: #ffce00;
+    font-size: 0.85em;
+}
+.intro .contents h1{
+    font-size: 2.7em;
+    margin-top: 0.2em;
+}
+.intro .contents .bar{
+    background-color: #ffce00;
+    border-radius: 0.1em;
+    width: 1.6em;
+    height: 0.25em;
+    display: block;
+    margin-top: 0.7em;
+}
+.intro .contents p{
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 1em;
+    display: block;
+}
+.intro .contents p span{
+    font-weight: bolder;
+}
+.intro .contents a{
+    font-weight: bold;
+    padding: 0.6em 1em;
+    border-radius: 2em;
+    border: 0.1em solid #ffce00;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    margin-top: 0.5em;
+    color: #edeae1;
+    text-decoration: none;
+}
+
+.intro .contents2{
+    display: flex;
+    position: relative;
+    color: rgb(237, 234, 225);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+}
+.intro .contents2 h1{
+    font-size: 1em;
+    margin-top: 0.2em;
+}
+.intro .contents2 h1 span{
+    color: #ffce00;
+}
+.intro .contents2 .bar{
+    width: 1em;
+    height: 0.15em;
+    border-radius: 1em;
+    display: block;
+    background-color: #ffce00;
+    margin-top: 0.4em;
+}
+.intro .contents2 p{
+    margin-top: 0.5em;
+    font-size: 0.7em;
+    text-align: center;
+    display: block;
+}
+.intro .down_img{
+    width: 3em;
+    margin-top: 1em;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,20%);
+    animation: ani 1s ease-in-out infinite;
+}
+
+@keyframes ani{
+    0%{
+        transform: translate(-50%,20%);
+    }
+    50%{
+        transform: translate(-50%,50%);
+    }
+    100%{
+        transform: translate(-50%,20%);
+    }
+}
+
+/* -------------------------- section1 ---------------------------- */
+
+.section1{
+    /* width: 100%; */
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #edeae1;
+    padding: 2em;
+    padding-bottom: 5em;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+}
+.section1 img{
+    width: 10em;
+}
+.section1 .section_title{
+    font-size: 1.3em;
+    font-weight: 900;
+}
+.section1 .contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: wrap;
+    width: 28em;
+    max-width: 100vw;
+}
+.section1 .item{
+    width: max-content;
+    padding: 1em;
+    width: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.section1 .item:first-child{
+    flex-basis: 15em;
+}
+.section1 .item .num{
+    color: #05468a;
+    border-bottom: 0.13em solid #05468a;
+    display: inline-block;
+    /* noto sans 굵기 black인거 찾기 */
+}
+.section1 .item .text{
+    font-size: 0.8em;
+    margin-top: 0.1em;
+}
+.section1 .item .sub_text{
+    font-size: 0.2em;
+    margin-top: 0.3em;
+    font-weight: 400;   
+    letter-spacing: -0.5px;
+}
+
+/* -------------------------- section2 ---------------------------- */
+
+.section2{
+    /* width: 100%; */
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #d5d2ca;
+    padding: 2.5em;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+}
+.section2 img{
+    width: 5em;
+}
+.section2 .section_title{
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 0.6em;
+}
+.section2 .contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: wrap;
+    /* flex-wrap: wrap; */
+    width: 28em;
+    margin-top: 1em;
+    max-width: 100vw;
+}
+.section2 .item{
+    padding: 1em;
+    width: 8.5em;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/sec2_item.png") center center no-repeat;
+    background-size: cover;
+}
+.section2 .item h2{
+    margin-top: 0.5em;
+    font-size: 1em;
+}
+.section2 .item h1{
+    font-size: 1.4em;
+}
+.section2 .item h1 span{
+    color: #05468a;
+}
