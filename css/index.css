@@ -10,7 +10,7 @@
 
 .intro{
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
     background: url("../img/intro_bg.png") center center no-repeat;
     background-size: cover;
