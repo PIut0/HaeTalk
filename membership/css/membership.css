@@ -1,0 +1,174 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    word-break: keep-all;
+    text-align: center;
+}
+
+/* 
+
+    base
+        beige : #edeae1
+        middle : #e1ded6
+        dark : #d5d2ca
+
+    point
+        black : #1a1a1a
+        white : #edeae1
+        yellow : #ffce00
+        blue : #05468a
+
+*/
+
+/* ---------------------------- nav bar ---------------------------- */
+
+.nav_bar{
+    background-color: #d5d2ca;
+    width: 100%;
+    height: 3.5em;
+    padding: 0.25em;
+    text-align: center;
+}
+.nav_bar img{
+    height: 100%;
+}
+
+/* ---------------------------- section1 ---------------------------- */
+
+.section1{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #edeae1;
+    padding: 2em;
+    padding-bottom: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.section1 .text{
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    font-weight: normal;
+}
+.section1 .text span{
+    font-weight: 900;
+}
+.section1 .section1_main{
+    width: 15em;
+}
+.section1 h3{
+    font-weight: normal;
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+.section1 h3 span{
+    font-weight: 800;
+}
+.section1 h4{
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 3em;
+    opacity: 0.6;
+}
+.section1 .down{
+    width: 1.7em;
+    margin-top: 1.3em;
+}
+
+/* ---------------------------- section2 ---------------------------- */
+
+.section2{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #d5d2ca;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.section2 img{
+    width: 7.5em;
+}
+.section2 h1{
+    font-size: 1.5em;
+    font-weight: 900;
+    margin: 0.7em;
+}
+.section2 h2{
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+/* ---------------------------- section3 ---------------------------- */
+
+.section3{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #edeae1;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.section3 h5{
+    font-size: 0.85em;
+    color: #05468a;
+    font-weight: 600;
+}
+.section3 .section3_main{
+    width: 12em;
+}
+.section3 h1{
+    font-weight: 900;
+}
+.section3 .bar{
+    background-color: #05468a;
+    border-radius: 0.1em;
+    width: 1.2em;
+    height: 0.17em;
+    display: block;
+    margin-top: 0.5em;
+}
+.section3 h2{
+    font-size: 0.8em;
+    margin-top: 1em;
+    font-weight: 700;
+}
+.section3 h2 span{
+    color: #05468a;
+}
+
+.section3 .contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: wrap;
+    /* flex-wrap: wrap; */
+    width: 28em;
+    margin-top: 1em;
+    max-width: 100vw;
+}
+.section3 .contents .item{
+    width: 7em;
+    height: auto;
+    padding: 0.8em;
+}
+.section3 .contents .item img{
+    width: 3.5em;
+}
+.section3 .contents .item h3{
+    font-size: 0.45em;
+    font-weight: normal;
+}
+.section3 .contents .item h3 span{
+    font-weight: 800;
+}
