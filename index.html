@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>해잡남</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
         <link rel="stylesheet" href="./css/index.css">
     </head>
     <body>
@@ -94,5 +95,39 @@
                 </div>
             </div>
         </div>
+
+        <div class="section3">
+            <div class="bar"></div>
+            <h1 class="text">놓치기 아까운 <span>해톡 멤버스</span>만의 특별한 혜택을 소개합니다</h1>
+            <img src="./img/section3.png" alt="">
+        </div>
+        <div class="section4">
+            <img src="./img/section4.png" alt="">
+            <h1 class="text">실제로 해톡 멤버스속에선 <span>얼마나 혜택</span>을 볼 수 있을까요?</h1>
+            <div class="bar"></div>
+            <h2 class="sub_text">파격적인 혜택의 해잡남 서비스! 고객사례로 보고 느끼자!</h2>
+            <!-- <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+            </div> -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/swiper1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/swiper2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/swiper3.png" alt=""></div>
+                </div>
+            </div>
+        </div>
     </body>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+        })
+    </script>
 </html>
