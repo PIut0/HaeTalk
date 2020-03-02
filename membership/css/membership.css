@@ -9,6 +9,7 @@
     color: #1a1a1a;
     word-break: keep-all;
     text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 
@@ -47,7 +48,6 @@
     flex-direction: column;
     background-color: #edeae1;
     padding: 2em;
-    padding-bottom: 2em;
     justify-content: center;
     align-items: center;
 }
@@ -66,7 +66,6 @@
 .section1 h3{
     font-weight: normal;
     font-size: 1em;
-    margin-bottom: 0.2em;
     text-align: center;
 }
 .section1 h3 span{
