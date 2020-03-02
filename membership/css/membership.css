@@ -209,5 +209,57 @@
 }
 .section4 .contents img{
     width: 9em;
+    height: auto;
     margin: 0.5em;
+}
+
+/* ---------------------------- section5 ---------------------------- */
+
+.section5{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #edeae1;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.section5 img{
+    width: 7em;
+}
+.section5 h1{
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #05468a;
+}
+.section5 .border{
+    width: 100%;
+    border: 1.5px solid #05468a;
+    margin-top: -5px;
+}
+.section5 h2{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 0.7em;
+}
+.section5 h3{
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #edeae1;
+    background-color: #05468a;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+    padding: 0.25em 0.3em 0.2em 0.3em;
+    border-radius: 50%;
+}
+.section5 h4{
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 0.3em;
+}
+.section5 h5{
+    font-size: 2em;
+    margin-top: 0.4em;
+    color: #05468a;
+    font-weight: 900;
 }
