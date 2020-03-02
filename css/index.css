@@ -9,7 +9,7 @@
 /* -------------------------- intro ---------------------------- */
 
 .intro{
-    width: 100%;
+    /* width: 100%; */
     min-height: 90vh;
     position: relative;
     background: url("../img/intro_bg.png") center center no-repeat;
@@ -177,6 +177,7 @@
     color: #05468a;
     border-bottom: 0.13em solid #05468a;
     display: inline-block;
+    font-weight: 900;
     /* noto sans 굵기 black인거 찾기 */
 }
 .section1 .item .text{
@@ -267,6 +268,8 @@
 .section3 .text{
     font-size: 0.85em;
     margin-top: 1em;
+    word-break: keep-all;
+    text-align: center;
 }
 .section3 .text span{
     color: #05468a;
@@ -294,6 +297,8 @@
 .section4 .text{
     font-size: 0.9em;
     margin-top: 1em;
+    word-break: keep-all;
+    text-align: center;
 }
 .section4 .text span{
     color: #05468a;
@@ -314,6 +319,11 @@
 .section4 .swiper-container{
     width: 100%;
     margin-top: 1em;
+}
+.section4 .swiper-scrollbar{
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .swiper-slide img{
     width: 100%;
