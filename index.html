@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="./css/index.css">
     </head>
     <body>
+
+        <nav class="bottom_nav">
+            <h1>배송가능지역 확인하기</h1>
+        </nav>
+
         <div class="intro">
             <img src="./img/menu.png" class="menu" alt="">
             <img src="./img/ht_logo_1.png" class="logo1" alt="">
@@ -16,7 +21,7 @@
                 <h1>해톡 멤버스</h1>
                 <div class="bar"></div>
                 <p>해톡 멤버스는 <span>월 9,900원</span>으로 프리미엄 회를 전국 시세 대비 20%이상 저렴한 가격에 구매하는 국내 최초 해산물 구독 서비스입니다.</p>
-                <a href="#">멤버십 가입 바로가기 ></a>
+                <a href="./membership/membership.html">멤버십 가입 바로가기 ></a>
             </div>
             <div class="contents2">
                 <h1>수산물 유통혁신의 시작.</h1>
@@ -26,7 +31,6 @@
             </div>
             <img src="./img/down.png" class="down_img" alt="">
         </div>
-
         <div class="section1">
             <img src="./img/section1.png" alt="">
             <h1 class="section_title">어떤 고객님께 필요할까요?</h1>
@@ -126,5 +130,8 @@
                 el: '.swiper-scrollbar',
             },
         })
+        function toMembership(){
+            location.href = "/membership/mebership.html"
+        }
     </script>
 </html>
