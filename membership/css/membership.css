@@ -12,6 +12,17 @@
     font-family: "Noto Sans KR", sans-serif;
 }
 
+@media screen and (min-width: 30em){
+    body{
+        margin: auto;
+        width: 33em;
+        background-color: #edeae1;
+        border: 1px solid black;
+        border-top: none;
+        border-bottom: none;
+    }
+}
+
 /* 
 
     base
@@ -51,14 +62,10 @@
     justify-content: center;
     align-items: center;
 }
-.section1 .text{
-    text-align: center;
-    font-size: 1.3em;
-    margin-bottom: 1em;
-    font-weight: normal;
-}
-.section1 .text span{
-    font-weight: 900;
+.section1 h1{
+    font-size: 2.2em;
+    font-weight: 700;
+    text-decoration: underline;
 }
 .section1 .section1_main{
     width: 15em;
@@ -93,18 +100,62 @@
     padding: 3em 2em;
     justify-content: center;
     align-items: center;
+    /* background-image: linear-gradient(to right, rgba(0,0,0,0.2) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x; */
 }
 .section2 img{
-    width: 7.5em;
+    width: 4em;
 }
-.section2 h1{
-    font-size: 1.5em;
-    font-weight: 900;
-    margin: 0.7em;
+.section2 > h1{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
-.section2 h2{
-    font-size: 0.8em;
+.section2 .contents{
+    background-color: #edeae1;
+    border: 1px solid #1a1a1a;
+    padding: 2em 1em;
+    width: 17em;
+}
+.section2 .contents h2{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #05468a;
+    text-decoration: underline;
+}
+.section2 .contents h1{
+    font-size: 1em;
     font-weight: normal;
+    padding: 0.5em;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.2) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+}
+.section2 .contents h1 span{
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.section2 .contents h3{
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 1.2em;
+}
+.section2 .contents h4{
+    font-size: 1em;
+    font-weight: 700;
+}
+.section2 .contents a{
+    margin-top: 1em;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    color: #edeae1;
+    background-color: #05468a;
+    padding: 0.7em 3.5em;
 }
 
 /* ---------------------------- section3 ---------------------------- */
@@ -118,58 +169,49 @@
     justify-content: center;
     align-items: center;
 }
-.section3 h5{
-    font-size: 0.85em;
-    color: #05468a;
-    font-weight: 600;
-}
-.section3 .section3_main{
-    width: 12em;
-}
-.section3 h1{
-    font-weight: 900;
-}
-.section3 .bar{
-    background-color: #05468a;
-    border-radius: 0.1em;
-    width: 1.2em;
-    height: 0.17em;
-    display: block;
-    margin-top: 0.5em;
-}
-.section3 h2{
-    font-size: 0.8em;
-    margin-top: 1em;
-    font-weight: 700;
-}
-.section3 h2 span{
-    color: #05468a;
-}
 
 .section3 .contents{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-flow: wrap;
-    /* flex-wrap: wrap; */
-    width: 28em;
-    margin-top: 1em;
-    max-width: 100vw;
+    background-color: #edeae1;
+    border: 1px solid #1a1a1a;
+    padding: 2em 1em;
+    width: 17em;
 }
-.section3 .contents .item{
-    width: 10em;
-    height: auto;
-    padding: 0.8em;
+.section3 .contents h2{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #05468a;
+    text-decoration: underline;
 }
-.section3 .contents .item img{
-    width: 3.5em;
+.section3 .contents h1{
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0.5em;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.2) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
 }
-.section3 .contents .item h3{
-    font-size: 0.85em;
-    font-weight: 500;
+.section3 .contents h1 span{
+    font-size: 1.8em;
+    font-weight: 700;
 }
-.section3 .contents .item h3 span{
-    font-weight: 800;
+.section3 .contents h3{
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 1.2em;
+}
+.section3 .contents h4{
+    font-size: 1em;
+    font-weight: 700;
+}
+.section3 .contents a{
+    margin-top: 1.5em;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    color: #edeae1;
+    background-color: #05468a;
+    padding: 0.7em 3.5em;
 }
 
 /* ---------------------------- section4 ---------------------------- */
@@ -183,34 +225,49 @@
     justify-content: center;
     align-items: center;
 }
-.section4 .section4_main{
-    width: 5em;
+.section4 h2{
+    font-size: 1.1em;
+    font-weight: normal;
 }
 .section4 h1{
     font-size: 1.5em;
     font-weight: 900;
-    margin-top: 0.5em;
     color: #05468a;
 }
-.section4 h2{
-    font-size: 0.8em;
-    font-weight: 500;
+.section4 img{
+    width: 7em;
+    margin-top: 4em;
+    margin-bottom: 0.5em;
+}
+.section4 h3{
+    font-size: 1.2em;
+    font-weight: 800;
+    color: #05468a;
+    text-decoration: underline;
+}
+.section4 h4{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.section4 .item{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+.section4 .item img{
+    width: 19em;
+    margin-left: 0.7em;
     margin-top: 0.5em;
 }
-.section4 .contents{
-    width: 28em;
-    max-width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-flow: wrap;
-    height: max-content;
-    margin-top: 1em;
-}
-.section4 .contents img{
-    width: 9em;
-    height: 9.4em;
-    margin: 0.5em;
+.section4 a{
+    margin-top: 2em;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    color: #edeae1;
+    background-color: #05468a;
+    padding: 0.7em 3.5em;
 }
 
 /* ---------------------------- section5 ---------------------------- */

@@ -9,9 +9,10 @@
     </head>
     <body>
 
-        <!-- <nav class="bottom_nav">
-            <h1>배송가능지역 확인하기</h1>
-        </nav> -->
+        <nav class="bottom_nav">
+            <img src="./img/ping.png" alt="">
+            <a href="/shipable/shipable.html">배송가능지역 확인하기</a>
+        </nav>
 
         <div class="intro">
             <img src="./img/menu.png" class="menu" alt="">
@@ -22,8 +23,8 @@
                 <p>해톡은 <span>하루 330원</span>으로 프리미엄 회를<br> 전국 시세 대비 30%이상 저렴한 가격에 구매할 수 있는<br> 국내 최초 해산물 구독 서비스입니다.</p>
             </div>
             <div class="contents2">
-                <h2>수산물 유통혁신의 시작.</h2>
-                <h1><span>국내최초</span> 회 구독 플랫폼</h1>
+                <h2>수산물 유통혁신의 시작</h2>
+                <h1><span>국내 최초</span> 회 구독 플랫폼</h1>
             </div>
             <img src="./img/down.png" class="down_img" alt="">
         </div>
@@ -33,7 +34,7 @@
         </div>
 
         <div class="section2">
-            <img src="/img/sec2_1.png" alt="">
+            <img src="./img/sec2_1.png" alt="">
             <div class="current swipe_item">
                 <img src="./img/sec2_1.png" alt="">
             </div>
@@ -108,19 +109,19 @@
 
         <div class="section7">
             <h1>특대광어 <span>8,900원</span></h1>
-            <h2>해톡상품 보러가기 ></h2>
+            <a>해톡상품 보러가기 ></a>
         </div>
 
         <div class="section8">
             <h2>지금 구독해야 가장 저렴한</h2>
             <h1> &lt; 해톡 얼리버드 멤버십 &gt;</h1>
-
             <img src="./img/sec8_1.png" alt="">
             <h3>하루 330원!</h3>
             <h4>하루 330원으로 식생활의 수준을 높여보세요!</h4>
-            <img src="./img/sec8_2.png" alt="">
+            <img style="margin-left: 1.3em;" src="./img/sec8_2.png" alt="">
             <h4>지금 멤버십 가입시</h4>
             <h3>구독료 최대 50%할인!</h3>
+            <a href="#">멤버십 혜택 더 알아보기 ></a>
         </div>
     </body>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
@@ -138,21 +139,5 @@
             location.href = "/membership/mebership.html";
         }
 
-        function checkMobileDevice() {
-            var mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
-            for (var info in mobileKeyWords) {
-                if (navigator.userAgent.match(mobileKeyWords[info]) != null) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        function toMobile(){
-            if(!checkMobileDevice()){
-                location.href=`/test.html`
-            }
-        }
-        toMobile();
     </script>
 </html>

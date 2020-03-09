@@ -12,6 +12,17 @@ body{
     color: #1a1a1a;
 }
 
+@media screen and (min-width: 30em){
+    body{
+        margin: auto;
+        width: 33em;
+        background-color: #edeae1;
+        border: 1px solid black;
+        border-top: none;
+        border-bottom: none;
+    }
+}
+
 /* 
 
     base
@@ -32,16 +43,29 @@ body{
 .bottom_nav{
     width: 100%;
     height: 3em;
-    background-color: #d5d2ca;
+    background-color: #edeae1;
     position: fixed;
     bottom: 0px;
     z-index: 100;
     box-sizing: border-box;
     padding: 0.5em;
+    max-width: calc( 33em - 2px );
     text-align: center;
+    border-top: 1px solid #3a3a3a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-.bottom_nav h1{
-    font-size: 1.2em;
+.bottom_nav a{
+    color: #3a3a3a;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+}
+.bottom_nav img{
+    width: 1em;
+    margin-right:0.5em;
 }
 
 /* -------------------------- intro ---------------------------- */
@@ -49,6 +73,7 @@ body{
 .intro{
     /* width: 100%; */
     min-height: calc(100vh - 3em);
+    /* height: 42em; */
     position: relative;
     background: url("../img/intro_bg.png") center center no-repeat;
     background-size: cover;
@@ -243,7 +268,7 @@ body{
 .section3 h2{
     font-weight: normal;
     font-size: 0.8em;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 /* -------------------------- section4 ---------------------------- */
@@ -414,11 +439,14 @@ body{
 .section7 h1 span{
     font-weight: 700;
 }
-.section7 h2{
+.section7 a{
     font-weight: 500;
+    font-size: 1.4em;
     margin-top: 1em;
     padding: 0.3em 0.7em;
     border: 0.1em solid #edeae1;
+    color: #edeae1;
+    text-decoration: none;
 }
 
 /* -------------------------- section8 ---------------------------- */
@@ -431,6 +459,7 @@ body{
     padding: 3em 2em;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5em;
 }
 .section8 h2{
     font-size: 1.1em;
@@ -443,7 +472,7 @@ body{
 }
 .section8 img{
     width: 7em;
-    margin-top: 2.3em;
+    margin-top: 3.3em;
     margin-bottom: 0.5em;
 }
 .section8 h3{
@@ -455,4 +484,13 @@ body{
 .section8 h4{
     font-size: 0.9em;
     font-weight: 600;
+}
+.section8 a{
+    padding: 0.5em 1.3em;
+    background-color: #d5d2ca;
+    border: 1px solid #1a1a1a;
+    font-size: 1.1em;
+    margin-top: 2em;
+    color: #1a1a1a;
+    text-decoration: none;
 }
