@@ -426,7 +426,7 @@ body{
     display: flex;
     flex-direction: column;
     color: #edeae1;
-    background: url(/img/section7.png) center center no-repeat;
+    background: url("../img/section7.png") center center no-repeat;
     background-size: cover;
     padding: 3em 2em;
     justify-content: center;
