@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>해잡남</title>
+        <link rel="stylesheet" href="./css/shipable.css">
+    </head>
+    <script>
+        function toMain(){
+            location.href = "../index.html";
+        }
+    </script>
+    <body>
+        <nav class="nav_bar">
+            <img class="menu" src="./img/menu_b.png" class="menu" alt="">
+            <img onclick="toMain()"  class="logo" src="./img/logo_b.png" alt="">
+            <img class="cart" src="./img/cart_b.png" alt="">
+        </nav>
+
+        <div class="section1">
+            <h2 class="text">주문 가능 지역인지 꼭 확인하세요!</h2>
+            <h2 class="text">하루 두 번! 고객님이 원하는 시간에 찾아가는</h2>
+            <h1>'해톡배송'</h1>
+        </div>
+
+        <div class="section2">
+            <img src="./img/section1.png" alt="">
+            <h2>오늘 주문하면 오늘 저녁에는</h2>
+            <h2>꼭 도착하는 <span>해톡배송!</span></h2>
+            <div class="area_search">
+                <div class="search">배송 가능 지역 확인하기</div><img src="./img/search.png" alt="">
+            </div>
+            <h3 class="shipable">해톡 배송가능 지역 안내</h3>
+            <h4>서울 전지역, 경기도 안양,고양,과천 전지역</h4>
+            <h4>이외지역 배송 불가</h4>
+            <div class="cover"></div>
+            <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+            <div id="layer" style="display:none;position:fixed;overflow:hidden;-webkit-overflow-scrolling:touch;"></div>           
+        </div>
+
+        <div class="section3">
+            <div>
+                <img src="./img/sec3_1.png" alt="">
+                <img src="./img/sec3_2.png" alt="">
+            </div>
+            <div class="contents">
+                <h1>[ 꼭 알아두기! ]</h1>
+                <h2>서울 전지역 토요일 서비스 이용가능 (월~토요일까지 운영)<br>겅기도 안양, 과천, 고양시 토요일 서비스 이용불가 (월~금요일까지 운영)</h2>
+                <h1>[ 해톡배송 유의사항 안내 ]</h1>
+                <h2>경기도 안양, 과천, 고양시의 경우 주소지에 따라<br>간혹 정시에 도착하지 못하는 경우가 있을 수 있습니다.<br>일요일과 법정 공휴일은 서비스를 운영하지 않습니다.</h2>
+            </div>
+        </div>
+    </body>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 배송 가능 지역 확인 Code -->
+    <script>
+        let area_list = [
+            "서울",
+            "안양시",
+            "고양시",
+            "과천시"
+        ];
+        var element_layer = document.getElementById('layer');
+        let search = document.querySelector(".area_search");
+        let cover = document.querySelector(".cover");
+        let shipable = document.querySelector(".shipable");
+
+        function showArea(data){
+            if(data){
+                shipable.innerHTML = `<span class="possible">배송 가능 지역입니다</span>`;
+            }else{
+                shipable.innerHTML = `<span class="impossible">배송 불가 지역입니다</span>`;
+            }
+        }
+        cover.addEventListener("click",closeDaumPostcode);
+
+        function closeDaumPostcode() {
+            element_layer.style.display = 'none';
+            cover.style.display='none';
+        }
+
+        function sample2_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    element_layer.style.display = 'none';
+
+                    let result = false;
+                    let place = `${data.sido} ${data.sigungu}`;
+                    area_list.forEach((Element)=>{
+                        if(place.includes(Element)){
+                            result=true;
+                        }
+                    })
+                    showArea(result);
+                },
+                onclose: closeDaumPostcode,
+                width : '100%',
+                height : '100%',
+                maxSuggestItems : 5,
+            }).embed(element_layer);
+
+            element_layer.style.display = 'block';
+            cover.style.display='block';
+
+        }
+
+        search.addEventListener("click",sample2_execDaumPostcode);
+    </script>
+</html>
