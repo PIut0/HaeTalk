@@ -258,6 +258,9 @@
     color: #05468a;
     text-decoration: underline;
 }
+.section4 h3 span{
+    color: inherit;
+}
 .section4 h4{
     font-size: 0.9em;
     font-weight: 600;

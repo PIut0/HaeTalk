@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>해잡남</title>
         <link rel="stylesheet" href="./css/membership.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
     <script>
         function toMain(){
@@ -66,11 +67,11 @@
             <h2>지금 구독해야 가장 저렴한</h2>
             <h1> &lt; 해톡 얼리버드 멤버십 &gt;</h1>
             <img src="./img/sec4_1.png" alt="">
-            <h3>하루 330원!</h3>
+            <h3>하루 <span id="count1">330</span>원!</h3>
             <h4>하루 330원으로 식생활의 수준을 높여보세요!</h4>
             <img style="margin-left: 1.3em;" src="./img/sec4_2.png" alt="">
             <h4>지금 멤버십 가입시</h4>
-            <h3>구독료 최대 20%할인!</h3>
+            <h3>구독료 최대 <span id="count2">20</span>%할인!</h3>
             <div class="item">
                 <img src="./img/sec4_3.png" alt="">
                 <img src="./img/sec4_4.png" alt="">
@@ -122,4 +123,5 @@
             </ul>
         </div>
     </body>
+    <script src="./js/mem_ani.js" type="module"></script>
 </html>

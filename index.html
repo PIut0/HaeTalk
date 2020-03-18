@@ -136,7 +136,7 @@
             <h4>하루 330원으로 식생활의 수준을 높여보세요!</h4>
             <img style="margin-left: 1.3em;" src="./img/sec8_2.png" alt="">
             <h4>지금 멤버십 가입시</h4>
-            <h3>구독료 최대 20%할인!</h3>
+            <h3>구독료 최대 <span id="count3">20</span>%할인!</h3>
             <a href="#">멤버십 혜택 더 알아보기 ></a>
         </div>
     </body>
@@ -155,13 +155,17 @@
                 el: '.swiper-scrollbar',
             },
         });
+
+        function toMain(){
+            location.href = "../index.html";
+        }
     </script>
 
     <!-- count up -->
     <script src="./js/countUp.min.js" type="module"></script>
 
     <!-- scroll ani -->
-    <script src="./js/index_ani.js" type="module"></script>    
+    <script src="./js/index_ani.js" type="module"></script>
 
     <!-- index js -->
     <script>

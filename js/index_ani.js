@@ -2,13 +2,17 @@ import { CountUp } from './countUp.min.js';
 
 let count1;
 let count2;
+let count3;
 let height;
 
 $(document).ready(function(){
     count1 = new CountUp('count1', 8900,{
+        smartEasingThreshold: 8900,
     });
     count2 = new CountUp('count2', 330,{
     });
+    count3 = new CountUp('count3', 20, {
+    })
     height = window.innerHeight;
 });
 
@@ -47,14 +51,15 @@ window.addEventListener('scroll',function(e){
         });
         sec5 = true;
     }
-    if(!sec7 && moveTop >= 3300){
+    if(!sec7 && moveTop >= 3350){
         // section7
         count1.start();
         sec7 = true;
     }
-    if(!sec8 && moveTop >= 3700){
+    if(!sec8 && moveTop >= 3800){
         // section8
         count2.start();
+        count3.start();
         sec8 = true;
     }
 })
