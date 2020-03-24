@@ -40,7 +40,7 @@ body{
 */
 
 /* animation */
-
+/* 
 .hide{
     opacity: 0;
 }
@@ -173,7 +173,7 @@ body{
 [data-aos="ani-intro-text"].aos-animate{
     opacity: 1;
     transform: translateY(0em);
-}
+} */
 
 /* -------------------------- nav_bar ---------------------------- */
 
@@ -236,15 +236,36 @@ body{
 
 .intro{
     /* width: 100%; */
-    min-height: calc(100vh - 3em);
+    /* min-height: calc(100vh - 3em); */
     /* height: 42em; */
     position: relative;
-    background: url("../img/intro_bg.png") center center no-repeat;
-    background-size: cover;
+    /* background: url("../img/intro_bg.png") center center no-repeat;
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     color: #edeae1;
+    overflow: hidden;
+    /* animation: bg_ani 5s; */
 }
+
+.intro .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/intro_bg.png") center center no-repeat;
+    background-size: cover;
+    animation: bg_ani 10s both;
+}
+
+@keyframes bg_ani{
+    0%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .intro .menu{
     width: 2em;
     position: absolute;
@@ -283,7 +304,7 @@ body{
     margin-top: 0.7em;
 }
 .intro .contents p{
-    font-size: 0.7em;
+    font-size: 0.85em;
     text-align: center;
     margin-top: 1em;
     display: block;
@@ -505,11 +526,11 @@ body{
     padding: 0.8em;
 }
 .section4 .contents .item img{
-    height: 3em;
-    margin-bottom: 0.5em;
+    width: 6em;
 }
 .section4 .contents .item h3{
     font-size: 0.85em;
+    margin-top: -1.2em;
     font-weight: normal;
 }
 .section4 .contents .item h3 span{
@@ -652,9 +673,8 @@ body{
     color: #05468a;
 }
 .section8 img{
-    width: 7em;
+    width: 8em;
     margin-top: 3.3em;
-    margin-bottom: 0.5em;
 }
 .section8 h3{
     font-size: 1.2em;

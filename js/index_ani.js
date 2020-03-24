@@ -7,65 +7,79 @@ let height;
 
 $(document).ready(function(){
     count1 = new CountUp('count1', 8900,{
+        duration: 3.5,
         smartEasingThreshold: 8900,
     });
     count2 = new CountUp('count2', 330,{
+        duration: 3.5
     });
     count3 = new CountUp('count3', 20, {
+        duration: 3.5
     })
     height = window.innerHeight;
+    document.querySelector(".intro").style.height = `calc(${height}px - 3em)`;
 });
 
-
-
-window.addEventListener('scroll',function(e){
-    let moveTop = $(window).scrollTop();
-    let sec3 = false;
-    let sec4 = false;
-    let sec5 = false;
-    let sec7 = false;
-    let sec8 = false;
-
-    if(!sec3 && moveTop >= 1050){
-        // section3
-        document.querySelector(".section3 h1").classList.remove('hide');
-        document.querySelector(".section3 h1").classList.add('sec3_ani');
-        document.querySelector(".section3 h2").classList.remove('hide');
-        document.querySelector(".section3 h2").classList.add('sec3_ani');
-        sec3 = true;
-    }
-
-    if(!sec4 && moveTop >= 1450){
-        // section4
-        document.querySelectorAll(".section4 .item").forEach((element,num)=>{
-            element.classList.remove("hide");
-            element.classList.add(`sec4_ani_${num+1}`);
-        });
-        sec4 = true;
-    }
-
-    if(!sec5 && moveTop >= 2200){
-        // section5
-        document.querySelectorAll(".section5 .contents img").forEach((element)=>{
-            element.classList.add('sec5_ani');
-        });
-        sec5 = true;
-    }
-    if(!sec7 && moveTop >= 3350){
-        // section7
-        count1.start();
-        sec7 = true;
-    }
-    if(!sec8 && moveTop >= 3800){
-        // section8
-        count2.start();
-        count3.start();
-        sec8 = true;
-    }
+ScrollReveal({
+    delay:200,
+    duration: 1200,
+    distance:"10px",
+    viewFactor:0.8
 })
 
-function test(){
-    console.log(height);
-    console.log($(window).scrollTop());
-    console.log($(window).scrollTop() + height);
-}
+let introList = [
+    document.querySelector('.intro .contents p'),
+    document.querySelector('.intro .contents2 h1'),
+    document.querySelector('.intro .contents2 h2'),
+]
+
+let fadeupList = [
+    document.querySelector('.section1 h1'),
+    
+    document.querySelector('.section3 h1'),
+    document.querySelector('.section3 h2'),
+
+    document.querySelector('.section5 img'),
+    document.querySelector('.section5 h1'),
+    document.querySelector('.section5 h2'),
+]
+let itemList1 = [
+    document.querySelector('.section4 .contents .item1'),
+    document.querySelector('.section4 .contents .item3'),
+    document.querySelector('.section4 .contents .item5'),
+]
+let itemList2 = [
+    document.querySelector('.section4 .contents .item2'),
+    document.querySelector('.section4 .contents .item4'),
+    document.querySelector('.section4 .contents .item6'),
+]
+let imgList = document.querySelectorAll('.section5 .contents img');
+
+ScrollReveal().reveal(introList,{
+    duration: 1500
+});
+ScrollReveal().reveal(fadeupList);
+ScrollReveal().reveal(itemList1);
+ScrollReveal().reveal(itemList2,{
+    delay:350
+});
+ScrollReveal().reveal(imgList);
+
+ScrollReveal().reveal("#count1",{
+    opacity:1,
+    viewFactor:1,
+    distance:"0px",
+    beforeReveal:()=>{count1.start()}
+})
+ScrollReveal().reveal("#count2",{
+    opacity:1,
+    viewFactor:1,
+    distance:"0px",
+    beforeReveal:()=>{count2.start()}
+})
+ScrollReveal().reveal("#count3",{
+    opacity:1,
+    viewFactor:1,
+    distance:"0px",
+    beforeReveal:()=>{count3.start()}
+})

@@ -66,12 +66,14 @@
 /* ---------------------------- section1 ---------------------------- */
 
 .section1{
+    position: relative;
     height: max-content;
     display: flex;
     flex-direction: column;
     background-color: #edeae1;
     padding: 2em;
     padding-top: 5.5em;
+    padding-bottom: 4em;
     justify-content: center;
     align-items: center;
 }
@@ -92,7 +94,7 @@
     font-weight: 800;
 }
 .section1 h4{
-    font-size: 0.5em;
+    font-size: 0.7em;
     text-align: center;
     font-weight: 500;
     margin-top: 3em;
@@ -101,6 +103,22 @@
 .section1 .down{
     width: 1.5em;
     margin-top: 1em;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,20%);
+    animation: ani 1s ease-in-out infinite;
+}
+@keyframes ani{
+    0%{
+        transform: translate(-50%,20%);
+    }
+    50%{
+        transform: translate(-50%,50%);
+    }
+    100%{
+        transform: translate(-50%,20%);
+    }
 }
 
 /* ---------------------------- section2 ---------------------------- */
@@ -136,8 +154,6 @@
 .section2 .contents h2{
     font-size: 1.3em;
     font-weight: 600;
-    color: #05468a;
-    text-decoration: underline;
 }
 .section2 .contents h1{
     font-size: 1em;
@@ -151,6 +167,8 @@
 .section2 .contents h1 span{
     font-size: 1.8em;
     font-weight: 700;
+    color: #05468a;
+    /* text-decoration: underline; */
 }
 .section2 .contents h3{
     font-size: 1em;
@@ -192,8 +210,6 @@
 .section3 .contents h2{
     font-size: 1.3em;
     font-weight: 600;
-    color: #05468a;
-    text-decoration: underline;
 }
 .section3 .contents h1{
     font-size: 1em;
@@ -207,6 +223,8 @@
 .section3 .contents h1 span{
     font-size: 1.8em;
     font-weight: 700;
+    color: #05468a;
+    /* text-decoration: underline; */
 }
 .section3 .contents h3{
     font-size: 1em;
@@ -248,9 +266,8 @@
     color: #05468a;
 }
 .section4 img{
-    width: 7em;
+    width: 10em;
     margin-top: 4em;
-    margin-bottom: 0.5em;
 }
 .section4 h3{
     font-size: 1.2em;
@@ -293,49 +310,31 @@
     display: flex;
     flex-direction: column;
     background-color: #edeae1;
-    padding: 3em 2em;
+    padding: 4.5em 2em;
     /* padding-bottom: 3.5em; */
     justify-content: center;
     align-items: center;
 }
 .section5 img{
+    margin-top: 2.2em;
+    margin-bottom: 1.7em;
     width: 19em;
 }
 .section5 h1{
-    font-size: 2.5em;
-    font-weight: 900;
-    color: #05468a;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #1a1a1a;
 }
-.section5 .border{
-    width: 100%;
-    border: 1.5px solid #05468a;
-    margin-top: -5px;
+.section5 h1 span{
+    font-size: 1.7em;
+    color: #05468a;
 }
 .section5 h2{
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-top: 0.7em;
-}
-.section5 h3{
-    font-size: 1.5em;
-    font-weight: 900;
-    color: #edeae1;
-    background-color: #05468a;
-    margin-top: 1.8em;
-    margin-bottom: 0.5em;
-    padding: 0.17em 0.3em 0.2em 0.3em;
-    border-radius: 50%;
-}
-.section5 h4{
     font-size: 1em;
     font-weight: normal;
-    margin-top: 0.3em;
 }
-.section5 h5{
-    font-size: 2em;
-    margin-top: 0.2em;
-    color: #05468a;
-    font-weight: 900;
+.section5 h2 span{
+    font-weight: 600;
 }
 
 /* ---------------------------- section6 ---------------------------- */
